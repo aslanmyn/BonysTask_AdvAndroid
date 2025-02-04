@@ -17,16 +17,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Установка Toolbar в качестве ActionBar
+
         setSupportActionBar(binding.toolbar)
 
-        // Получаем NavController
+
         val navController = binding.navHostFragment.getFragment<androidx.navigation.fragment.NavHostFragment>().navController
 
-        // Настраиваем ActionBar с NavController
+
         setupActionBarWithNavController(navController)
 
-        // Настраиваем нижнюю навигацию с NavController
+
         binding.bottomNavigation.setupWithNavController(navController)
     }
 
